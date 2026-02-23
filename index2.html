@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 30px;
+        }
+        .card{
+            position: relative;
+            width: 200px;
+            height: 300px;
+            overflow: hidden;
+            border-radius:10px ;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        .bg-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .blurred-layer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: bottom;
+            filter:blur(2px);
+            z-index:1;
+            mask-image: linear-gradient(to top,rgb(133, 7, 28),rgb(66, 4, 14));
+            mask-size: 100% 100%;
+            mask-repeat: no-repeat;
+            -webkit-mask-image: linear-gradient(to top,green,rgb(3, 52, 3));
+        }
+        .content{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: rgb(6, 79, 104);
+            z-index: 2;
+        }
+        .content h3{
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        .content p{
+            font-size:14px ;
+            color: blueviolet;
+            line-height: 1.4;
+        }
+        .app{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .cards{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;   
+        }
+    </style>
+</head>
+<body>
+    <div class="app flex flex-col gap-10 items-center">
+        <input class="inp px-5 py-5 rounded outline-none bg-[#111] text-[#888]" type="text" placeholder="Search...">
+        <div class="cards flex gap-10">
+          
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>
